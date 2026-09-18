@@ -56,14 +56,20 @@ export const ProgressIndicator: React.FC = () => {
     >
       {/* Container limited to mobile width centered on desktop */}
       <div className="max-w-[440px] mx-auto px-4 py-2.5 flex items-center justify-between">
-        {/* Active phase badge */}
+        {/* Active brand & phase badge */}
         <div className="flex items-center gap-2">
-          <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#ff5500]/15 border border-[#ff5500]/40 text-[10px] font-bold text-[#ff5500] font-mono">
-            {currentStep.number}
+          <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#ff5500]/15 border border-[#ff5500]/40 text-[10px] font-bold text-[#ff5500] font-athletic tracking-wider uppercase">
+            TIME MW
           </span>
-          <span className="text-[11px] font-semibold tracking-wider text-neutral-300 uppercase font-display">
-            {currentStep.label}
-          </span>
+          {activeStepIndex > 0 ? (
+            <span className="text-[11px] font-semibold tracking-wider text-neutral-300 uppercase font-display">
+              {currentStep.number} • {currentStep.label}
+            </span>
+          ) : (
+            <span className="text-[11px] font-semibold tracking-wider text-neutral-400 uppercase font-display">
+              MARCOS WILLIAN
+            </span>
+          )}
         </div>
 
         {/* Step dots interactive navigation */}

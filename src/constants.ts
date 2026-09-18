@@ -9,7 +9,7 @@ export const OFFICIAL_LINKS = {
 };
 
 export const PROGRESS_STEPS: ProgressStep[] = [
-  { number: '01', label: 'OBJETIVO', sectionId: 'objetivo' },
+  { number: '01', label: 'INÍCIO', sectionId: 'objetivo' },
   { number: '02', label: 'MÉTODO', sectionId: 'metodo' },
   { number: '03', label: 'TIME MW', sectionId: 'timemw' },
   { number: '04', label: 'EVOLUÇÃO', sectionId: 'evolucao' },
