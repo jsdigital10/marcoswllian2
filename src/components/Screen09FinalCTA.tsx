@@ -95,7 +95,7 @@ export const Screen09FinalCTA: React.FC<Screen09FinalCTAProps> = ({
                     MODALIDADE ESCOLHIDA:
                   </span>
                   <span className="text-sm font-extrabold uppercase font-athletic text-white tracking-wide">
-                    {selectedModality.title} • {selectedModality.tag}
+                    {selectedModality.title} • {selectedModality.actionText}
                   </span>
                 </div>
                 <CheckCircle2 className="w-5 h-5 text-[#25d366] shrink-0" />

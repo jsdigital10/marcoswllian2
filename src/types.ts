@@ -5,14 +5,15 @@ export interface ObjectiveOption {
   iconName: 'flame' | 'zap' | 'dumbbell' | 'gauge';
 }
 
-export type ModalityId = 'corrida' | 'musculacao' | 'presencial' | 'hibrido';
+export type ModalityId = 'corrida' | 'musculacao' | 'presencial' | 'online' | 'hibrido';
 
 export interface ModalityOption {
   id: ModalityId;
   title: string;
-  tag: string;
-  description: string;
-  iconName: 'timer' | 'dumbbell' | 'mapPin' | 'zap' | 'activity';
+  actionText: string;
+  tag?: string;
+  description?: string;
+  iconName: 'timer' | 'dumbbell' | 'mapPin' | 'globe' | 'smartphone' | 'zap' | 'activity';
   whatsappMessage: string;
 }
 
