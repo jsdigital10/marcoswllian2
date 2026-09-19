@@ -24,8 +24,8 @@ export const Footer: React.FC = () => {
           <p className="text-sm font-black font-athletic uppercase tracking-widest text-white">
             MARCOS WILLIAN
           </p>
-          <p className="text-[11px] font-semibold font-display tracking-widest text-neutral-400 uppercase">
-            PERSONAL TRAINER • PREPARADOR FÍSICO
+          <p className="text-[10px] sm:text-[11px] font-semibold font-display tracking-wider text-neutral-400 uppercase leading-relaxed max-w-[320px] mx-auto">
+            PERSONAL TRAINER • PREPARADOR FÍSICO • PERFORMANCE ESPORTIVA • TREINO HÍBRIDO
           </p>
           <p className="text-xs font-extrabold font-athletic tracking-[0.2em] text-[#ff5500] uppercase">
             TIME MW

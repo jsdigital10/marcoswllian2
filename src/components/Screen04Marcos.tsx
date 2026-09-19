@@ -54,8 +54,8 @@ export const Screen04Marcos: React.FC = () => {
             <h3 className="text-xl sm:text-2xl font-black uppercase font-athletic tracking-wide text-white">
               MARCOS WILLIAN
             </h3>
-            <p className="text-xs font-semibold tracking-widest text-[#ff6a00] uppercase font-display">
-              PERSONAL TRAINER • PREPARADOR FÍSICO
+            <p className="text-[11px] sm:text-xs font-semibold tracking-wider text-[#ff6a00] uppercase font-display leading-relaxed">
+              PERSONAL TRAINER • PREPARADOR FÍSICO • PERFORMANCE ESPORTIVA • TREINO HÍBRIDO
             </p>
           </div>
         </div>

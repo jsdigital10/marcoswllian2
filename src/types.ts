@@ -5,6 +5,17 @@ export interface ObjectiveOption {
   iconName: 'flame' | 'zap' | 'dumbbell' | 'gauge';
 }
 
+export type ModalityId = 'corrida' | 'musculacao' | 'presencial' | 'hibrido';
+
+export interface ModalityOption {
+  id: ModalityId;
+  title: string;
+  tag: string;
+  description: string;
+  iconName: 'timer' | 'dumbbell' | 'mapPin' | 'zap' | 'activity';
+  whatsappMessage: string;
+}
+
 export interface ProgressStep {
   number: string;
   label: string;

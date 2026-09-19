@@ -2,14 +2,20 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, MessageCircle } from 'lucide-react';
 import { createWhatsAppUrl, getWhatsAppCtaMessage } from '../constants';
-import { ObjectiveOption } from '../types';
+import { ObjectiveOption, ModalityOption } from '../types';
 
 interface Screen09FinalCTAProps {
   selectedObjective: ObjectiveOption | null;
+  selectedModality: ModalityOption | null;
 }
 
-export const Screen09FinalCTA: React.FC<Screen09FinalCTAProps> = ({ selectedObjective }) => {
-  const whatsappUrl = createWhatsAppUrl(getWhatsAppCtaMessage(selectedObjective?.title));
+export const Screen09FinalCTA: React.FC<Screen09FinalCTAProps> = ({
+  selectedObjective,
+  selectedModality,
+}) => {
+  const whatsappUrl = createWhatsAppUrl(
+    getWhatsAppCtaMessage(selectedObjective?.title, selectedModality?.title)
+  );
 
   return (
     <section
@@ -56,27 +62,45 @@ export const Screen09FinalCTA: React.FC<Screen09FinalCTAProps> = ({ selectedObje
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-xs sm:text-sm text-neutral-300 font-sans leading-relaxed mb-6 max-w-[340px]"
         >
-          “Se você decidiu levar sua evolução a sério, vamos conversar sobre o seu objetivo.”
+          “Se você decidiu levar sua evolução a sério, vamos conversar sobre o seu treino no Time MW.”
         </motion.p>
 
-        {/* RECUPERAÇÃO DO OBJETIVO ESCOLHIDO NA TELA 02 */}
-        {selectedObjective && (
+        {/* RECUPERAÇÃO DAS ESCOLHAS DO VISITANTE (OBJETIVO & MODALIDADE) */}
+        {(selectedObjective || selectedModality) && (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="w-full mb-8 p-3.5 rounded-xl bg-[#0e1e3d]/90 border border-[#ff5500]/50 shadow-[0_0_20px_rgba(255,85,0,0.2)] flex items-center justify-between text-left"
+            className="w-full mb-8 p-4 rounded-2xl bg-[#0e1e3d]/90 border border-[#ff5500]/40 shadow-[0_0_20px_rgba(255,85,0,0.2)] text-left space-y-3"
           >
-            <div>
-              <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase block">
-                SEU OBJETIVO DEFINIDO:
-              </span>
-              <span className="text-sm font-extrabold uppercase font-athletic text-[#ff6a00] tracking-wide">
-                “{selectedObjective.title}”
-              </span>
-            </div>
-            <CheckCircle2 className="w-5 h-5 text-[#ff5500] shrink-0" />
+            {selectedObjective && (
+              <div className="flex items-center justify-between gap-2 border-b border-white/[0.08] pb-2.5">
+                <div>
+                  <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase block">
+                    SEU OBJETIVO:
+                  </span>
+                  <span className="text-sm font-extrabold uppercase font-athletic text-[#ff6a00] tracking-wide">
+                    “{selectedObjective.title}”
+                  </span>
+                </div>
+                <CheckCircle2 className="w-5 h-5 text-[#ff5500] shrink-0" />
+              </div>
+            )}
+
+            {selectedModality && (
+              <div className="flex items-center justify-between gap-2">
+                <div>
+                  <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase block">
+                    MODALIDADE ESCOLHIDA:
+                  </span>
+                  <span className="text-sm font-extrabold uppercase font-athletic text-white tracking-wide">
+                    {selectedModality.title} • {selectedModality.tag}
+                  </span>
+                </div>
+                <CheckCircle2 className="w-5 h-5 text-[#25d366] shrink-0" />
+              </div>
+            )}
           </motion.div>
         )}
 

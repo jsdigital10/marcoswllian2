@@ -57,11 +57,15 @@ export const Screen01Hero: React.FC<Screen01HeroProps> = ({ onExploreClick }) =>
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight font-athletic uppercase text-metallic">
             MARCOS WILLIAN
           </h1>
-          <p className="text-xs sm:text-sm font-semibold tracking-[0.25em] text-neutral-400 uppercase font-display flex items-center justify-center gap-2">
+          <div className="text-[10px] sm:text-xs font-semibold tracking-[0.18em] text-neutral-300 uppercase font-display flex flex-wrap items-center justify-center gap-x-2 gap-y-1 px-2">
             <span>PERSONAL TRAINER</span>
             <span className="text-[#ff5500]">•</span>
             <span>PREPARADOR FÍSICO</span>
-          </p>
+            <span className="text-[#ff5500]">•</span>
+            <span>PERFORMANCE ESPORTIVA</span>
+            <span className="text-[#ff5500]">•</span>
+            <span>TREINO HÍBRIDO</span>
+          </div>
         </motion.div>
 
         {/* MENSAGEM DE IMPACTO: NÃO É SÓ TREINAR. É EVOLUIR. */}

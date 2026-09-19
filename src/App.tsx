@@ -4,12 +4,13 @@
  */
 
 import React, { useState } from 'react';
-import { ObjectiveOption } from './types';
+import { ObjectiveOption, ModalityOption } from './types';
 import { MotionBackground } from './components/MotionBackground';
 import { ProgressIndicator } from './components/ProgressIndicator';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { Screen01Hero } from './components/Screen01Hero';
 import { Screen02Objective } from './components/Screen02Objective';
+import { ScreenModality } from './components/ScreenModality';
 import { Screen03Method } from './components/Screen03Method';
 import { Screen04Marcos } from './components/Screen04Marcos';
 import { Screen05Impact } from './components/Screen05Impact';
@@ -21,6 +22,7 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   const [selectedObjective, setSelectedObjective] = useState<ObjectiveOption | null>(null);
+  const [selectedModality, setSelectedModality] = useState<ModalityOption | null>(null);
 
   const scrollToId = (id: string) => {
     const el = document.getElementById(id);
@@ -52,6 +54,16 @@ export default function App() {
         <Screen02Objective
           selectedObjective={selectedObjective}
           onSelectObjective={setSelectedObjective}
+          onContinue={() => scrollToId('modalidade')}
+        />
+
+        {/* Divider accent */}
+        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff5500]/30 to-transparent my-2" />
+
+        {/* FUNÇÃO DO PERSONAL: CORRIDA • MUSCULAÇÃO • PRESENCIAL (DESTAQUE 3D) */}
+        <ScreenModality
+          selectedModality={selectedModality}
+          onSelectModality={setSelectedModality}
           onContinue={() => scrollToId('metodo')}
         />
 
@@ -95,7 +107,10 @@ export default function App() {
         <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff5500]/40 to-transparent my-2" />
 
         {/* TELA 09 — ÚNICO CTA COMERCIAL FORTE (AGORA É COM VOCÊ) */}
-        <Screen09FinalCTA selectedObjective={selectedObjective} />
+        <Screen09FinalCTA
+          selectedObjective={selectedObjective}
+          selectedModality={selectedModality}
+        />
 
         {/* RODAPÉ */}
         <Footer />
