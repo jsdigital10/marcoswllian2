@@ -1,7 +1,9 @@
 import React from 'react';
-import { OFFICIAL_LINKS } from '../constants';
+import { createWhatsAppUrl, WHATSAPP_FLOATING_MESSAGE } from '../constants';
 
 export const FloatingWhatsApp: React.FC = () => {
+  const whatsappUrl = createWhatsAppUrl(WHATSAPP_FLOATING_MESSAGE);
+
   return (
     <aside
       aria-label="Atendimento via WhatsApp"
@@ -9,10 +11,10 @@ export const FloatingWhatsApp: React.FC = () => {
     >
       <a
         id="floating-whatsapp-btn"
-        href={OFFICIAL_LINKS.WHATSAPP}
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Falar no WhatsApp com Marcos Willian"
+        aria-label="Falar no WhatsApp com Marcos Willian sobre consultoria"
         className="group relative flex items-center justify-center w-13 h-13 rounded-full bg-gradient-to-br from-[#2fe064] via-[#25d366] to-[#128c7e] text-white shadow-[0_6px_20px_rgba(37,211,102,0.35),0_2px_4px_rgba(0,0,0,0.6),inset_0_1px_1px_rgba(255,255,255,0.4)] border border-white/20 transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
       >
         {/* Subtle breathing ring */}

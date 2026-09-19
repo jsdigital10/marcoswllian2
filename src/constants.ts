@@ -4,8 +4,24 @@ export const OFFICIAL_LINKS = {
   MAIN_LOGO: 'https://i.postimg.cc/rFX6pTd8/Convite-de-Aniversario-Colagem-com-Foto-Divertido-Branco.png',
   TIME_MW_LOGO: 'https://i.postimg.cc/j5jq7Hdd/8B76526B-65A1-42A7-9B3C-B193207DB3DC.png',
   WHATSAPP: 'https://wa.link/s8gahy',
+  WHATSAPP_PHONE: '5534999457566',
   INSTAGRAM: 'https://www.instagram.com/marcos_willian.oficial?stkn=MXMyNWw2NXNtanc5cg==',
   INSTAGRAM_HANDLE: '@marcos_willian.oficial',
+};
+
+export const createWhatsAppUrl = (message: string) => {
+  const phone = OFFICIAL_LINKS.WHATSAPP_PHONE;
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+};
+
+export const WHATSAPP_FLOATING_MESSAGE =
+  'Olá Marcos Willian! Vim pelo seu site oficial e gostaria de fazer uma consultoria para levar meus treinos a outro patamar. Como funciona para entrar no Time MW?';
+
+export const getWhatsAppCtaMessage = (objectiveTitle?: string) => {
+  if (objectiveTitle) {
+    return `Olá Marcos Willian! Vim do seu site e decidi buscar meu próximo nível. Meu objetivo principal é "${objectiveTitle}" — gostaria de fazer uma consultoria personalizada com você no Time MW!`;
+  }
+  return 'Olá Marcos Willian! Vim do seu site e quero levar minha evolução a sério. Gostaria de fazer uma consultoria personalizada e entender como funciona o acompanhamento do Time MW!';
 };
 
 export const PROGRESS_STEPS: ProgressStep[] = [

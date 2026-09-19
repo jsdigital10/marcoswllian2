@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, MessageCircle } from 'lucide-react';
-import { OFFICIAL_LINKS } from '../constants';
+import { createWhatsAppUrl, getWhatsAppCtaMessage } from '../constants';
 import { ObjectiveOption } from '../types';
 
 interface Screen09FinalCTAProps {
@@ -9,6 +9,8 @@ interface Screen09FinalCTAProps {
 }
 
 export const Screen09FinalCTA: React.FC<Screen09FinalCTAProps> = ({ selectedObjective }) => {
+  const whatsappUrl = createWhatsAppUrl(getWhatsAppCtaMessage(selectedObjective?.title));
+
   return (
     <section
       id="comecar"
@@ -88,7 +90,7 @@ export const Screen09FinalCTA: React.FC<Screen09FinalCTAProps> = ({ selectedObje
         >
           <a
             id="main-cta-whatsapp-btn"
-            href={OFFICIAL_LINKS.WHATSAPP}
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Quero fazer parte do Time MW via WhatsApp"
