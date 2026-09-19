@@ -76,6 +76,7 @@ export const Screen05Impact: React.FC<Screen05ImpactProps> = ({ onDiscoverClick 
             alt="Logo Oficial Time MW"
             className="w-full h-full object-contain filter drop-shadow-[0_15px_35px_rgba(255,85,0,0.35)] relative z-10"
             loading="lazy"
+            referrerPolicy="no-referrer"
           />
         </motion.div>
 

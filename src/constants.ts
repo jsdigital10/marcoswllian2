@@ -2,7 +2,7 @@ import { ObjectiveOption, ProgressStep, PillarCard, EvolutionWord, RealResultPil
 
 export const OFFICIAL_LINKS = {
   MAIN_LOGO: 'https://i.postimg.cc/rFX6pTd8/Convite-de-Aniversario-Colagem-com-Foto-Divertido-Branco.png',
-  TIME_MW_LOGO: 'https://i.postimg.cc/28Rp5Yqn/5DBE1D9D-C3C8-4E98-A9C1-A233508DDCC5.png',
+  TIME_MW_LOGO: 'https://i.postimg.cc/j5jq7Hdd/8B76526B-65A1-42A7-9B3C-B193207DB3DC.png',
   WHATSAPP: 'https://wa.link/s8gahy',
   INSTAGRAM: 'https://www.instagram.com/marcos_willian.oficial?stkn=MXMyNWw2NXNtanc5cg==',
   INSTAGRAM_HANDLE: '@marcos_willian.oficial',
