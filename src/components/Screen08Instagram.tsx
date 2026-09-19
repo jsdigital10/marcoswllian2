@@ -36,7 +36,7 @@ export const Screen08Instagram: React.FC = () => {
           {/* SÍMBOLO RECONHECÍVEL DO INSTAGRAM COM ACABAMENTO 3D, ALTO-RELEVO E BRILHO */}
           <div className="relative mb-5">
             <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888] p-[1.5px] shadow-[0_8px_25px_rgba(220,39,67,0.35),0_2px_4px_rgba(0,0,0,0.6)] flex items-center justify-center">
-              <div className="w-full h-full rounded-[14px] bg-[#121217] flex items-center justify-center relative overflow-hidden">
+              <div className="w-full h-full rounded-[14px] bg-[#0a162e] flex items-center justify-center relative overflow-hidden">
                 {/* 3D Sheen highlight */}
                 <div
                   aria-hidden="true"

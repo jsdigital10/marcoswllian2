@@ -64,7 +64,7 @@ export const Screen09FinalCTA: React.FC<Screen09FinalCTAProps> = ({ selectedObje
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="w-full mb-8 p-3.5 rounded-xl bg-[#14141c]/90 border border-[#ff5500]/40 shadow-[0_0_20px_rgba(255,85,0,0.15)] flex items-center justify-between text-left"
+            className="w-full mb-8 p-3.5 rounded-xl bg-[#0e1e3d]/90 border border-[#ff5500]/50 shadow-[0_0_20px_rgba(255,85,0,0.2)] flex items-center justify-between text-left"
           >
             <div>
               <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase block">

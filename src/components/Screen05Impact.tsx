@@ -12,18 +12,18 @@ export const Screen05Impact: React.FC<Screen05ImpactProps> = ({ onDiscoverClick 
     <section
       id="timemw"
       aria-label="Momento de Impacto Time MW"
-      className="relative py-24 px-5 min-h-screen flex flex-col items-center justify-center bg-black overflow-hidden"
+      className="relative py-24 px-5 min-h-screen flex flex-col items-center justify-center bg-[#071024] overflow-hidden"
     >
       {/* Deep atmospheric backdrops */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#180a02] via-[#050507] to-[#000000] opacity-90"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#13264d] via-[#09152e] to-[#050d1e] opacity-95"
       />
 
       {/* Atmospheric center orange glow behind the big Time MW logo */}
       <div
         aria-hidden="true"
-        className="absolute w-[320px] sm:w-[460px] h-[320px] sm:h-[460px] rounded-full bg-[#ff5500]/20 blur-[90px] pointer-events-none"
+        className="absolute w-[320px] sm:w-[460px] h-[320px] sm:h-[460px] rounded-full bg-[#ff5500]/25 blur-[90px] pointer-events-none"
       />
 
       <div className="relative z-10 w-full max-w-[420px] mx-auto text-center flex flex-col items-center">

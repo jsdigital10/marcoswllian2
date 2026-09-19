@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
     <footer
       id="footer"
       aria-label="Informações de Rodapé"
-      className="relative z-10 py-12 px-5 border-t border-white/[0.06] bg-[#07070a]/90 text-center"
+      className="relative z-10 py-12 px-5 border-t border-[#ff5500]/20 bg-[#071022]/95 text-center"
     >
       <div className="w-full max-w-[420px] mx-auto flex flex-col items-center space-y-4">
         {/* Identidade visual discreta e elegante */}

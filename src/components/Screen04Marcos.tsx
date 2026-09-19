@@ -43,7 +43,7 @@ export const Screen04Marcos: React.FC = () => {
           </div>
 
           {/* Subtle gradient vignette overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#09090d] via-[#09090d]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a162e] via-[#0a162e]/70 to-transparent" />
 
           {/* Identificação dentro da moldura */}
           <div className="relative z-10 w-full text-center space-y-1">

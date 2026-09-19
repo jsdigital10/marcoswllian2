@@ -52,7 +52,7 @@ export const ProgressIndicator: React.FC = () => {
   return (
     <header
       id="experience-progress-bar"
-      className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-[#070709]/80 border-b border-white/[0.05] transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-[#0a162e]/90 border-b border-[#ff5500]/20 shadow-[0_4px_20px_rgba(8,19,38,0.6)] transition-all duration-300"
     >
       {/* Container limited to mobile width centered on desktop */}
       <div className="max-w-[440px] mx-auto px-4 py-2.5 flex items-center justify-between">
